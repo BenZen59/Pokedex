@@ -5,7 +5,7 @@ function App() {
   return (
     <section>
       <MyTitle />
-      <PokemonCard />
+      <PokemonCard pokemon={"New"} />
     </section>
   );
 }
