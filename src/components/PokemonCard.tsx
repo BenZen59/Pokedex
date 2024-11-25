@@ -12,6 +12,10 @@ const pokemonList = [
 ];
 
 export default function PokemonCard({ pokemon }) {
+  pokemon = {
+    name: pokemon,
+    imgSrc: null,
+  };
   return (
     <>
       <figure>
