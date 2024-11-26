@@ -11,7 +11,12 @@ const pokemonList = [
   },
 ];
 
-export default function PokemonCard({ pokemon }) {
+interface pokemonProps {
+  name: string;
+  imgSrc: string;
+}
+
+export default function PokemonCard({ pokemon }: pokemonProps) {
   pokemon = {
     name: pokemon,
     imgSrc: null,
