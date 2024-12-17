@@ -30,26 +30,18 @@ const pokemonList = [
 ];
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
-
-  const handleIndexPrecedent = () => {
-    setPokemonIndex(pokemonIndex - 1);
+  const handlePokemon = (index: number) => {
+    setPokemonIndex(index);
   };
-
-  const handleIndexSuivant = () => {
-    setPokemonIndex(pokemonIndex + 1);
-  };
-
   return (
-    <section>
-      <MyTitle />
+    <div>
+      <nav>
+        {pokemonList.map((pokemon, index) => (
+          <button onClick={() => handlePokemon(index)}>{pokemon.name}</button>
+        ))}
+      </nav>
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-      {pokemonIndex > 0 && (
-        <button onClick={handleIndexPrecedent}>Précédent</button>
-      )}
-      {pokemonIndex < pokemonList.length - 1 && (
-        <button onClick={handleIndexSuivant}>Suivant</button>
-      )}
-    </section>
+    </div>
   );
 }
 
