@@ -1,7 +1,7 @@
 .card {
   width: 200px;
   padding: 1rem;
-  background-color: lightgreen;
+  background-color: lightblue;
   border-radius: 5px;
   box-shadow: 0px 0px 5px gray;
   color: white;
@@ -10,7 +10,7 @@
   text-shadow: 0px 0px 5px gray;
 }
 
-.card-img {
+.cardImg {
   width: 100%;
   height: auto;
   margin-bottom: 0.5rem;

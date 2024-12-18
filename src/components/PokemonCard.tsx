@@ -1,4 +1,5 @@
 import React from "react";
+import { card, cardImg } from "./PokemonCard.module.css";
 
 interface PokemonProps {
   pokemon: {
@@ -10,14 +11,14 @@ interface PokemonProps {
 export default function PokemonCard({ pokemon }: PokemonProps) {
   return (
     <>
-      <figure>
+      <figure className={card}>
         {pokemon.imgSrc ? (
-          <img src={pokemon.imgSrc} alt={pokemon.name} />
+          <img src={pokemon.imgSrc} alt={pokemon.name} className={cardImg} />
         ) : (
           <p>???</p>
         )}
+        <figcaption>{pokemon.name}</figcaption>
       </figure>
-      <figcaption>{pokemon.name}</figcaption>
     </>
   );
 }
